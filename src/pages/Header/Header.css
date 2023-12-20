@@ -1,0 +1,153 @@
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+}
+
+.header__searchIcon{ 
+    /* padding:5px ; */
+    /* padding: 10px 12px 7px; */
+    height: 42px !important;
+     background-color: #cd9042; 
+     border-radius: 0 6px 6px 0;
+  
+    
+} 
+
+
+.header__search{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+	padding: 10px 12px 7px;
+    margin-left: 10px;
+	
+}
+ /* add  */
+.header__clearlink {
+	text-decoration: none;
+}
+
+.header__search .header__searchIcon:hover {
+	background-color: rgb(247, 155, 80);
+}
+.header__searchInput{
+    height: 42px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+
+
+}
+
+.header__dropdown {
+	font-size: medium;
+	color: rgba(49, 48, 48, 0.692);
+    /* float: left; */
+}
+
+/* .dropdown__btn {
+	position: relative;
+	display: flex;
+} */
+.header__option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+	padding: 10px;
+    color: white;
+
+}
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__optionLineOne{
+    font-size: 11px;
+}
+.header__optionLineTwo{
+    font-size: 13px;
+    font-weight: 800;
+}
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 12px 5px;
+	margin: 0 10px;
+}
+
+.header__optionBasket:hover {
+	border: 1px solid white;
+	padding: 10px 5px;
+	margin: 0 10px;
+	border-radius: 2px;
+}
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__option:hover {
+	border: 1px solid white;
+	padding: 10px;
+	margin: 0 10px;
+	border-radius: 2px;
+}
+
+.flag {
+	padding: 20px 10px 10px;
+	border: 1px solid #131921;
+	border-radius: 2px;
+}
+
+.flag img {
+	width: 20px;
+	height: 15px;
+}
+.flag span {
+	color: #fff;
+}
+.flag:hover {
+	border: 1px solid #fff;
+	border-radius: 2px;
+}
+
+
+/* all with button  */
+
+.dropdown__btncontainer {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  
+
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    border-radius: 8px 0 0 8px;
+
+  }
+  .button:hover{
+    background: lightgray;
+  }
+  
+  .icon {
+    /* Add any additional styling for the icon */
+    margin-left: 3px; /* Add appropriate margin to separate the icon from the button text */
+  }
