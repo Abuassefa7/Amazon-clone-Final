@@ -25,16 +25,14 @@ app.post("/payments/create", async (req, res) => {
 			amount: parseInt(total),
 			currency: "USD",
 		});
-		
 
 		// ok-created
 		res.status(201).send({
 			clientSecret: paymentIntent.client_secret,
 		});
 	} catch (error) {
-		console.log(error);
-		res.status(500).send("Server error")
-
+		console.log(error.message);
+		res.status(500).send("Server error");
 	}
 });
 

@@ -16,6 +16,7 @@ dispatch({
     image:image,
     price:price,
     rating:rating,
+    quantity: 1,
 
   }
 })
@@ -42,7 +43,7 @@ dispatch({
        
         <img src={image}/> 
           
-        <button onClick={addToBasket}>Add to Basket</button>
+        <button onClick={addToBasket}>Add to Cart</button>
        
     </div>
   )

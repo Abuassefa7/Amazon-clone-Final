@@ -16,6 +16,10 @@ function Header() {
             auth.signOut()
         }
     }
+
+    const getQuantity = (basket) => {
+		return basket?.reduce((qty, item) => qty + item.quantity, 0);
+	};
   return (
     <>
     <div className='header'>
@@ -73,7 +77,8 @@ function Header() {
             <div className='header__optionBasket'>
                 <ShoppingBasketIcon/>
                 <span className='header__optionLineTwo header__basketCount'>
-                    {basket.length}
+                    {/* {basket.length} */}
+                    {getQuantity(basket)}
                 </span>
             </div>
             </Link>

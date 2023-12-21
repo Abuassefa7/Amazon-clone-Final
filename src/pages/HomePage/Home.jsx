@@ -17,17 +17,21 @@ function Home() {
             <div className='home__row'>
               <Product
               id="12341"
-              title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
-              price={11.96}
+              title="Amazon Fire TV 32 2-Series HD smart TV " 
+              price={109}
               rating={5}
-              image="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81SwhbLNyiL._AC_SX679_.jpg"
+              image="https://m.media-amazon.com/images/I/418UoVylqyL._AC_UY327_FMwebp_QL65_.jpg"
               /> 
               <Product
               id="49538094"
-              title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+              title="Meet Pixel 8, the helpful phone engineered"
               price={239.0}
               rating={4}
-              image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"/> 
+              // image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"/> 
+              image="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71SfoZu9a3L.__AC_SX300_SY300_QL70_FMwebp_.jpg"/> 
+
+
+              
               <Product
               id="4903850"
               title="Ninja NC301 CREAMi Ice Cream Maker, for Gelato, Mix-ins, Milkshakes, Sorbet, Smoothie Bowls & More"
@@ -39,7 +43,7 @@ function Home() {
               /> 
               <Product
               id="23445930"
-              title="Instant Pot 10-Quart Air Fryer, From the Makers of Instant Pot, 7-in-1 Functions, with EvenCrisp Technology, App with over 100 Recipes, Stainless Steel"
+              title="Instant Pot 10-Quart Air Fryer, From the Makers of Instant Pot, 7-in-1 Functions, "
               price={129.99}
               rating={4}
               image="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81gZ5WDqAdL._AC_SL1500_.jpg" 
@@ -48,10 +52,10 @@ function Home() {
             <div className='home__row'>
                <Product
                 id="4903850"
-                title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
+                title="Wireless Charging Station,3 in 1 Wireless Charging Stand Made for Apple Watch Ultra 9 8 7 6 SE 5 4 3,Fast Wireless Charger Made for iPhone 15/Plus/Pro "
                 price={199.99}
                 rating={3}
-                image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61pIIAY3cVL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
                /> 
                <Product
                id="23445930"

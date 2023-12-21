@@ -8,14 +8,24 @@ function Subtotal() {
     const [{basket},dispatch]=usestateValue()
     const navigate=useNavigate()
 
-    const getBasketTotal=(basket)=>basket?.reduce((amount,item)=>item.price + amount,0)
+    // const getBasketTotal=(basket)=>basket?.reduce((amount,item)=>item.price + amount,0)
+     const getBasketTotal=(basket) => basket?.reduce((amount, item) => amount + item.price * item.quantity, 0);
+
+    const getQuantity = (basket) => {
+		return basket?.reduce((qty, item) => qty + item.quantity, 0);
+	};
   return (
     <div className='subtotal'>
         <CurrencyFormat
             renderText={(value)=>(
                 <div>
-                    <p>subtotal ({basket.length} items): <strong>{value}</strong>
-                    </p>
+                    {/* <p>subtotal ({basket.length} items): <strong>{value}</strong>
+                    </p> */}
+                    <p>
+							Subtotal ({getQuantity(basket)}{" "}
+							{getQuantity(basket) === 1 ? "item" : "items"}):{" "}
+							<strong>{value}</strong>
+						</p>
                     <small className='subtotal__gift'>
                         <input type="checkbox" />This order contains a gift
                     </small>

@@ -11,11 +11,14 @@ import {db} from "../FirebaseFile/Firebase"
 function Payment() {
     const [{basket,user},dispatch]=usestateValue()
 
-    const getBasketTotal = (basket) =>
-    basket?.reduce((amount, item) => item.price + amount, 0);
+    // const getBasketTotal = (basket) =>
+    // basket?.reduce((amount, item) => item.price + amount, 0);
 
-    // const getBasketTotal= (basket)=>
-    //     basket?.reduce((amount, item) => item.price + amount, 0)
+     const getBasketTotal= (basket) => basket?.reduce((amount, item) => amount + item.price * item.quantity, 0);
+
+    const getQuantity = (basket) => {
+		return basket?.reduce((qty, item) => qty + item.quantity, 0);
+	};
     
     const stripe=useStripe();
     const elements=useElements();
@@ -88,7 +91,14 @@ function Payment() {
     <div className='payment'>
         <div className='payment__container'>
             <h1>
-                Checkout {<Link to="/checkout">{basket.length} items</Link>}
+                {/* Checkout {<Link to="/checkout">{basket.length} items</Link>} */}
+                
+                Checkout{" "}
+					<Link to="/checkout">
+						({getQuantity(basket)}{" "}
+						{getQuantity(basket) === 1 ? "item" : "items"}):{" "}
+					</Link>
+
             </h1>
             <div className='payment__section'>
                 <div className='payment__title'>
@@ -108,20 +118,22 @@ function Payment() {
                 </div>
                 
                 <div className='payment__items'>
-                {basket.map((item) => (
+                {basket.map((item,id) => (
                     <CheckoutProduct
+                        key={id}
                         id={item.id}
                         title={item.title}
                         image={item.image}
                         price={item.price}
                         rating={item.rating}
+                        quantity={item.quantity}
                     />
             ))}
 
                 </div>
             </div>
             <div className='payment__section'>
-                <div>
+                <div className="payment__title">
                     <h3>Payment Method</h3>
                 </div>
                 <div className='payment__details'>
