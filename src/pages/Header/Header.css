@@ -6,6 +6,10 @@
     position: sticky;
     top: 0;
     z-index: 100;
+
+    flex-wrap: wrap;
+    width: 100%;
+   
 }
 
 .header__logo{
@@ -68,12 +72,13 @@
     margin-right: 10px;
 	padding: 10px;
     color: white;
+    
 
 }
-.header__nav{
+/* .header__nav{
     display: flex;
     justify-content: space-evenly;
-}
+} */
 .header__optionLineOne{
     font-size: 11px;
 }
@@ -82,11 +87,14 @@
     font-weight: 800;
 }
 .header__optionBasket{
+    /* position: relative; */
     display: flex;
     align-items: center;
     color: white;
     padding: 12px 5px;
 	margin: 0 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .header__optionBasket:hover {
@@ -106,6 +114,8 @@
 	margin: 0 10px;
 	border-radius: 2px;
 }
+
+
 
 .flag {
 	padding: 20px 10px 10px;
@@ -151,3 +161,25 @@
     /* Add any additional styling for the icon */
     margin-left: 3px; /* Add appropriate margin to separate the icon from the button text */
   }
+
+/* for right side wrapper  */
+
+.right-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	background-color:  #131921;
+    width: 100%;
+}
+
+
+  /* header responsive start here */
+
+  @media (max-width: 772px) {
+	#top {
+		display: none;
+	}
+	.right-wrapper {
+		width: 100%;
+	}
+
+}

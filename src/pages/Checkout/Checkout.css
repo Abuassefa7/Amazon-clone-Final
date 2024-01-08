@@ -14,3 +14,12 @@
     height: max-content;
 
 }
+
+
+@media (max-width: 400px) {
+	.checkout {
+		padding-top: 80px;
+		
+}
+}
+
